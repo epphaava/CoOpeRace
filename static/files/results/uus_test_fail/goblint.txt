@@ -1,0 +1,20 @@
+[Info][Deadcode] Logical lines of code (LLoC) summary:
+  live: 14
+  dead: 0
+  total: 14
+[Warning][Race] Memory location myglobal2@static/files/uploaded_files/uus_test_fail.c:5:5-5:14 (race with conf. 110):
+  write with [mhp:{tid=[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]},
+            lock:{mutex1}, thread:[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]] (conf. 110) (static/files/uploaded_files/uus_test_fail.c:12:3-12:24)
+  write with [mhp:{tid=[main]; created={[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]}}, lock:{mutex2}, thread:[main]] (conf. 110) (static/files/uploaded_files/uus_test_fail.c:22:3-22:24)
+  read with [mhp:{tid=[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]}, lock:{mutex1}, thread:[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]] (conf. 110) (static/files/uploaded_files/uus_test_fail.c:12:3-12:24)
+  read with [mhp:{tid=[main]; created={[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]}}, lock:{mutex2}, thread:[main]] (conf. 110) (static/files/uploaded_files/uus_test_fail.c:22:3-22:24)
+[Warning][Race] Memory location myglobal1@static/files/uploaded_files/uus_test_fail.c:4:5-4:14 (race with conf. 110):
+  write with [mhp:{tid=[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]}, lock:{mutex1}, thread:[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]] (conf. 110) (static/files/uploaded_files/uus_test_fail.c:11:3-11:24)
+  write with [mhp:{tid=[main]; created={[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]}}, lock:{mutex2}, thread:[main]] (conf. 110) (static/files/uploaded_files/uus_test_fail.c:21:3-21:24)
+  read with [mhp:{tid=[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]}, lock:{mutex1}, thread:[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]] (conf. 110) (static/files/uploaded_files/uus_test_fail.c:11:3-11:24)
+  read with [mhp:{tid=[main]; created={[main, t_fun@static/files/uploaded_files/uus_test_fail.c:19:3-19:40]}}, lock:{mutex2}, thread:[main]] (conf. 110) (static/files/uploaded_files/uus_test_fail.c:21:3-21:24)
+[Info][Race] Memory locations race summary:
+  safe: 0
+  vulnerable: 0
+  unsafe: 2
+  total: 2

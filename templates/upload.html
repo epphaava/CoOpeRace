@@ -1,0 +1,61 @@
+{% block head %}
+<link rel="stylesheet" href="../static/css/main.css">
+
+<title>CoOpeRace: Upload file</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../static/js/script.js"></script>
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <div class="content-wrapper">
+
+        <div class="form-container">
+
+            <h1>Upload File</h1>
+            {% if message %}
+                <p>{{ message }}</p>
+            {% endif %}
+
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <button type="submit">Upload</button>
+            </form>
+
+            {% if existing_files %}
+                <h2>Choose from existing files:</h2>
+                <form method="POST">
+                    <select name="existing_file">
+                        {% for file in existing_files %}
+                            <option value="{{ file }}">{{ file }}</option>
+
+
+                        {% endfor %}
+                    </select>
+                    <button type="submit">Select</button>
+                    
+                </form>
+            {% endif %}
+        </div>
+
+        <div class="file-list-container">
+
+            <h2>Existing files:</h2>
+
+            {% if existing_files %}
+                <table id="existing-files-table">
+                    {% for file in existing_files %}
+                        <tr id="file-row-{{ loop.index }}" class="file-row">
+                            <td>{{ file }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% endif %}
+        </div>
+    </div>
+    <div id="file-contents-container"></div>
+</div>   
+
+{% endblock %}

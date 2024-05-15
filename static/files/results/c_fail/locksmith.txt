@@ -1,0 +1,31 @@
+gcc -D_GNUCC -E -DCIL=1 ../../static/files/uploaded_files/c_fail.c -o /tmp/cil-uYbl6p8N.i
+./cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-opWmk5L0.cil.c --list-guardedby /tmp/cil-uYbl6p8N.i
+
+************************* STARTING *************************
+
+functions declared and used but not defined:
+  pthread_join
+Warning: Possible data race: &myglobal:../../static/files/uploaded_files/c_fail.c:3 is not protected!
+ references:
+  dereference of &myglobal:../../static/files/uploaded_files/c_fail.c:3 at ../../static/files/uploaded_files/c_fail.c:9
+    &myglobal:../../static/files/uploaded_files/c_fail.c:3
+  locks acquired:
+    concrete mutex1:../../static/files/uploaded_files/c_fail.c:4
+    mutex1:../../static/files/uploaded_files/c_fail.c:4
+    mutex1:../../static/files/uploaded_files/c_fail.c:4
+  in: main at ../../static/files/uploaded_files/c_fail.c:13 -> ../../static/files/uploaded_files/c_fail.c:16
+
+  dereference of &myglobal:../../static/files/uploaded_files/c_fail.c:3 at ../../static/files/uploaded_files/c_fail.c:18
+    &myglobal:../../static/files/uploaded_files/c_fail.c:3
+  locks acquired:
+    concrete mutex2:../../static/files/uploaded_files/c_fail.c:5
+    mutex2:../../static/files/uploaded_files/c_fail.c:5
+    mutex2:../../static/files/uploaded_files/c_fail.c:5
+  in: main at ../../static/files/uploaded_files/c_fail.c:13
+
+
+*************************** DONE ***************************
+
+LockSmith run for: 0.033844 seconds
+
+gcc -D_GNUCC -E /tmp/cil-opWmk5L0.cil.c -o /tmp/cil-3pzjuMc8.cil.i

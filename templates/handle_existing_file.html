@@ -1,0 +1,30 @@
+{% block head %}
+<link rel="stylesheet" href="../static/css/main.css">
+
+<title>CoOpeRace: Save new file</title>
+<script src="../static/js/script.js"></script>
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <h1>File Already Exists</h1>
+    <div class="form-container">
+        <p>What do you want to do with the file?</p>
+        <form action="{{ url_for('handle_existing_file') }}" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="save">
+            <input type="hidden" name="filename" value="{{ filename }}">
+            <input type="hidden" name="file_data" value="{{ uploaded_file_data }}">
+            <button type="submit">Save and Replace</button>
+        </form>
+        <span>OR</span>
+        <form action="{{ url_for('handle_existing_file') }}" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="discard">
+            <input type="hidden" name="filename" value="{{ filename }}">
+            <input type="hidden" name="file_data" value="{{ uploaded_file_data }}">
+            <button type="submit">Discard</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

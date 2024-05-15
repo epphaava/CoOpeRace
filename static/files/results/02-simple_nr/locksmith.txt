@@ -1,0 +1,16 @@
+gcc -D_GNUCC -E -DCIL=1 ../../loputoo/application/static/files/uploaded_files/02-simple_nr.c -o /tmp/cil-LOnklbhT.i
+./cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-zkoDEmhK.cil.c --list-guardedby /tmp/cil-LOnklbhT.i
+
+************************* STARTING *************************
+
+functions declared and used but not defined:
+  pthread_join
+&myglobal:../../loputoo/application/static/files/uploaded_files/02-simple_nr.c:4 is protected by:
+  concrete mutex1:../../loputoo/application/static/files/uploaded_files/02-simple_nr.c:5
+  mutex1:../../loputoo/application/static/files/uploaded_files/02-simple_nr.c:5
+  mutex1:../../loputoo/application/static/files/uploaded_files/02-simple_nr.c:5
+*************************** DONE ***************************
+
+LockSmith run for: 0.035990 seconds
+
+gcc -D_GNUCC -E /tmp/cil-zkoDEmhK.cil.c -o /tmp/cil-YRdUw638.cil.i

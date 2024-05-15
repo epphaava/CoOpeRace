@@ -1,0 +1,135 @@
+Sat Apr 20 10:18:46 UTC 2024
+Loading Cil Varinfo ID ranges for lookup tables
+Loading ranges from .vids_ckeys_fixed
+Setting Cil Varinfo ID ranges
+Pre-pass analysis of pta constraints
+Constraints already exist. Skipping Compilation!!!
+Pre-pass done
+Finished parsing config group: SUMMARY_DB
+Finished parsing config group: REQUEST
+Finished parsing config group: DISTRIBUTED
+Finished parsing config group: FILE_SERVER
+Finished parsing config group: LOCK_FUNCS
+Finished parsing config group: THREAD_FUNCS
+Finished parsing config group: EXIT_FUNCS
+Finished parsing config group: BUILTIN_FUNCS
+Finished parsing config group: ALIAS_ANALYSIS
+Finished parsing config group: ENTRY_POINTS
+Finished parsing config group: SYM_EX
+Done reading config file
+Initializing Andersen's AA info
+Loading function info
+Loading tempVar info
+[Er]: addArgEdges: vararg or extern func 3 (0)?
+
+[Er]: addArgEdges: vararg or extern func 3 (1)?
+
+[Er]: addArgEdges: vararg or extern func 3 (2)?
+
+[Er]: addArgEdges: vararg or extern func 3 (3)?
+
+[Er]: addArgEdges: vararg or extern func 1 (0)?
+
+[Er]: addArgEdges: vararg or extern func 6 (0)?
+
+[Er]: addArgEdges: vararg or extern func 5 (0)?
+
+[Er]: addArgEdges: vararg or extern func 4 (0)?
+
+[Er]: addArgEdges: vararg or extern func 4 (1)?
+
+Filtered non-fp cons/total: 0/6
+
+Doing offline cycle detection --
+Number of HCD pairs: 1
+(13, 10) --> *t:0:__TEMP__ == l:14:id__heapify__0
+
+
+Offline cycles done
+
+Initial Lval to ID bindings (before cycle collapses):
+=====================================================
+g:1:free = 0
+g:3:pthread_create = 1
+g:4:pthread_join = 2
+g:5:pthread_mutex_lock = 3
+g:6:pthread_mutex_unlock = 4
+g:7:myglobal = 5
+g:8:mutex1 = 6
+g:9:mutex2 = 7
+g:10:t_fun = 8
+l:12:_a15_52256_alloc_1 = 9
+l:14:id__heapify__0 = 10
+l:15:__cil_tmp3 = 11
+r:13:main = 12
+t:0:__TEMP__ = 13
+g:2:malloc = 14
+g:13:main = 15
+
+Working with 16 lval nodes
+Solving constraints -- workqueue: 16
+Took 16 iterations, 0 more than initial worklist
+Converting pts to info to be serializable -- 16 elems
+Marking global reachability
+Lvals marked: 0
+Done marking global reachability (15)
+Rehashing data to find more equivalences
+Old bindings: 15	New: 14
+
+Preparing call graph file
+-------
+entering function t_fun
+entering function main
+Elapsed time (secs): 0.008796
+Top heap size (MB): 0
+Current heap size (MB): 0
+Lifetime allocated bytes (MB): 2
+Collections -- minor: 7 major: 2 compactions: 0
+Bytes per word: 8
+0.00user 0.00system 0:00.01elapsed 66%CPU (0avgtext+0avgdata 6612maxresident)k
+0inputs+16outputs (0major+874minor)pagefaults 0swaps
+Args: 
+ ./scc_stats.exe -cg /home/eppha/analyzers/relay-sv/tmp.SM31Awb8Nh/ciltrees/calls.anders -su client.cfg.anders
+Reached end of /home/eppha/analyzers/relay-sv/tmp.SM31Awb8Nh/ciltrees/calls.anders call graph file
+Num funcs: 7
+Scc_cg: Pruned 5 funcs w/out bodies for scc DAG
+SCC Graph computed
+
+Finished parsing config group: SUMMARY_DB
+Finished parsing config group: REQUEST
+Finished parsing config group: DISTRIBUTED
+Finished parsing config group: FILE_SERVER
+Finished parsing config group: LOCK_FUNCS
+Finished parsing config group: THREAD_FUNCS
+Finished parsing config group: EXIT_FUNCS
+Finished parsing config group: BUILTIN_FUNCS
+Finished parsing config group: ALIAS_ANALYSIS
+Finished parsing config group: ENTRY_POINTS
+Finished parsing config group: SYM_EX
+Done reading config file
+Loading Cil Varinfo ID ranges for lookup tables
+Loading ranges from .vids_ckeys_fixed
+Setting Cil Varinfo ID ranges
+Initializing Andersen's AA info
+Loading function info
+Loading tempVar info
+Using old PTA results: /home/eppha/analyzers/relay-sv/tmp.SM31Awb8Nh/ciltrees/.pta_results.anders
+Old PTA results loaded
+Entry points use roots: true
+size,	freq
+----------------
+1,	2
+SCC STATS -- TOTAL: 2, W-AVG: 1.000000, MAX: 1
+
+1,	2
+SCC STATS (CI) -- TOTAL: 2, W-AVG: 1.000000, MAX: 1
+
+fanout,	freq
+----------------
+FANOUT STATS -- TOTAL: 0, AVG: -nan, MAX: 0
+
+fanout,	freq
+----------------
+FANOUT STATS (CI) -- TOTAL: 0, AVG: -nan, MAX: 0
+
+Sat Apr 20 10:18:47 UTC 2024

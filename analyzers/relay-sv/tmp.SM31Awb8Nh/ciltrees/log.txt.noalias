@@ -1,0 +1,37 @@
+Sat Apr 20 10:18:47 UTC 2024
+Loading Cil Varinfo ID ranges for lookup tables
+Loading ranges from .vids_ckeys_fixed
+Setting Cil Varinfo ID ranges
+Pre-pass analysis of pta constraints
+Constraints already exist. Skipping Compilation!!!
+Pre-pass done
+Finished parsing config group: SUMMARY_DB
+Finished parsing config group: REQUEST
+Finished parsing config group: DISTRIBUTED
+Finished parsing config group: FILE_SERVER
+Finished parsing config group: LOCK_FUNCS
+Finished parsing config group: THREAD_FUNCS
+Finished parsing config group: EXIT_FUNCS
+Finished parsing config group: BUILTIN_FUNCS
+Finished parsing config group: ALIAS_ANALYSIS
+Finished parsing config group: ENTRY_POINTS
+Finished parsing config group: SYM_EX
+Done reading config file
+Initializing Andersen's AA info
+Loading function info
+Loading tempVar info
+Using old PTA results: /home/eppha/analyzers/relay-sv/tmp.SM31Awb8Nh/ciltrees/.pta_results.anders
+Old PTA results loaded
+Initializing NoAlias AA info
+Preparing call graph file
+-------
+entering function t_fun
+entering function main
+Elapsed time (secs): 0.007926
+Top heap size (MB): 0
+Current heap size (MB): 0
+Lifetime allocated bytes (MB): 2
+Collections -- minor: 7 major: 2 compactions: 0
+Bytes per word: 8
+0.00user 0.00system 0:00.01elapsed 72%CPU (0avgtext+0avgdata 6432maxresident)k
+0inputs+8outputs (0major+807minor)pagefaults 0swaps

@@ -1,0 +1,50 @@
+gcc -D_GNUCC -E -DCIL=1 ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c -o /tmp/cil-OoF9shs6.i
+./cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-3YGz6z38.cil.c --list-guardedby /tmp/cil-OoF9shs6.i
+
+************************* STARTING *************************
+
+functions declared and used but not defined:
+  pthread_join
+Warning: Possible data race: &myglobal1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:4 is not protected!
+ references:
+  dereference of &myglobal1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:4 at ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:11
+    &myglobal1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:4
+  locks acquired:
+    concrete mutex1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:6
+    mutex1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:6
+    mutex1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:6
+  in: main at ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:17 -> ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:19
+
+  dereference of &myglobal1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:4 at ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:21
+    &myglobal1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:4
+  locks acquired:
+    concrete mutex2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:7
+    mutex2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:7
+    mutex2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:7
+  in: main at ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:17
+
+
+Warning: Possible data race: &myglobal2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:5 is not protected!
+ references:
+  dereference of &myglobal2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:5 at ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:12
+    &myglobal2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:5
+  locks acquired:
+    concrete mutex1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:6
+    mutex1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:6
+    mutex1:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:6
+  in: main at ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:17 -> ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:19
+
+  dereference of &myglobal2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:5 at ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:22
+    &myglobal2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:5
+  locks acquired:
+    concrete mutex2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:7
+    mutex2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:7
+    mutex2:../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:7
+  in: main at ../../loputoo/application/static/files/uploaded_files/uus_test_fail.c:17
+
+
+*************************** DONE ***************************
+
+LockSmith run for: 0.035987 seconds
+
+gcc -D_GNUCC -E /tmp/cil-3YGz6z38.cil.c -o /tmp/cil-vcwRpV_v.cil.i

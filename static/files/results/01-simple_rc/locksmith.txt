@@ -1,0 +1,31 @@
+gcc -D_GNUCC -E -DCIL=1 ../../static/files/uploaded_files/01-simple_rc.c -o /tmp/cil-HsLTXubx.i
+./cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-d_6pt0sn.cil.c --list-guardedby /tmp/cil-HsLTXubx.i
+
+************************* STARTING *************************
+
+functions declared and used but not defined:
+  pthread_join
+Warning: Possible data race: &myglobal:../../static/files/uploaded_files/01-simple_rc.c:4 is not protected!
+ references:
+  dereference of &myglobal:../../static/files/uploaded_files/01-simple_rc.c:4 at ../../static/files/uploaded_files/01-simple_rc.c:10
+    &myglobal:../../static/files/uploaded_files/01-simple_rc.c:4
+  locks acquired:
+    concrete mutex1:../../static/files/uploaded_files/01-simple_rc.c:5
+    mutex1:../../static/files/uploaded_files/01-simple_rc.c:5
+    mutex1:../../static/files/uploaded_files/01-simple_rc.c:5
+  in: main at ../../static/files/uploaded_files/01-simple_rc.c:15 -> ../../static/files/uploaded_files/01-simple_rc.c:17
+
+  dereference of &myglobal:../../static/files/uploaded_files/01-simple_rc.c:4 at ../../static/files/uploaded_files/01-simple_rc.c:19
+    &myglobal:../../static/files/uploaded_files/01-simple_rc.c:4
+  locks acquired:
+    concrete mutex2:../../static/files/uploaded_files/01-simple_rc.c:6
+    mutex2:../../static/files/uploaded_files/01-simple_rc.c:6
+    mutex2:../../static/files/uploaded_files/01-simple_rc.c:6
+  in: main at ../../static/files/uploaded_files/01-simple_rc.c:15
+
+
+*************************** DONE ***************************
+
+LockSmith run for: 0.031520 seconds
+
+gcc -D_GNUCC -E /tmp/cil-d_6pt0sn.cil.c -o /tmp/cil-U3lhggpA.cil.i

@@ -1,0 +1,81 @@
+Sat Apr 20 10:18:45 UTC 2024
+Loading Cil Varinfo ID ranges for lookup tables
+Loading ranges from .vids_ckeys_fixed
+Setting Cil Varinfo ID ranges
+Pre-pass analysis of pta constraints
+Constraints already exist. Skipping Compilation!!!
+Pre-pass done
+Finished parsing config group: SUMMARY_DB
+Finished parsing config group: REQUEST
+Finished parsing config group: DISTRIBUTED
+Finished parsing config group: FILE_SERVER
+Finished parsing config group: LOCK_FUNCS
+Finished parsing config group: THREAD_FUNCS
+Finished parsing config group: EXIT_FUNCS
+Finished parsing config group: BUILTIN_FUNCS
+Finished parsing config group: ALIAS_ANALYSIS
+Finished parsing config group: ENTRY_POINTS
+Finished parsing config group: SYM_EX
+Done reading config file
+Initializing Steensgaard AA info
+Loading function info
+Loading tempVar info
+Using old PTA results
+Old PTA results loaded
+Preparing call graph file
+-------
+entering function t_fun
+entering function main
+Elapsed time (secs): 0.007314
+Top heap size (MB): 0
+Current heap size (MB): 0
+Lifetime allocated bytes (MB): 2
+Collections -- minor: 7 major: 2 compactions: 0
+Bytes per word: 8
+0.00user 0.00system 0:00.01elapsed 63%CPU (0avgtext+0avgdata 6668maxresident)k
+0inputs+8outputs (0major+838minor)pagefaults 0swaps
+Args: 
+ ./scc_stats.exe -cg /home/eppha/analyzers/relay-sv/tmp.SM31Awb8Nh/ciltrees/calls.cil -su client.cfg.cil
+Reached end of /home/eppha/analyzers/relay-sv/tmp.SM31Awb8Nh/ciltrees/calls.cil call graph file
+Num funcs: 7
+Scc_cg: Pruned 5 funcs w/out bodies for scc DAG
+SCC Graph computed
+
+Finished parsing config group: SUMMARY_DB
+Finished parsing config group: REQUEST
+Finished parsing config group: DISTRIBUTED
+Finished parsing config group: FILE_SERVER
+Finished parsing config group: LOCK_FUNCS
+Finished parsing config group: THREAD_FUNCS
+Finished parsing config group: EXIT_FUNCS
+Finished parsing config group: BUILTIN_FUNCS
+Finished parsing config group: ALIAS_ANALYSIS
+Finished parsing config group: ENTRY_POINTS
+Finished parsing config group: SYM_EX
+Done reading config file
+Loading Cil Varinfo ID ranges for lookup tables
+Loading ranges from .vids_ckeys_fixed
+Setting Cil Varinfo ID ranges
+Initializing Steensgaard AA info
+Loading function info
+Loading tempVar info
+Using old PTA results
+Old PTA results loaded
+Entry points use roots: false
+size,	freq
+----------------
+1,	2
+SCC STATS -- TOTAL: 2, W-AVG: 1.000000, MAX: 1
+
+1,	2
+SCC STATS (CI) -- TOTAL: 2, W-AVG: 1.000000, MAX: 1
+
+fanout,	freq
+----------------
+FANOUT STATS -- TOTAL: 0, AVG: -nan, MAX: 0
+
+fanout,	freq
+----------------
+FANOUT STATS (CI) -- TOTAL: 0, AVG: -nan, MAX: 0
+
+Sat Apr 20 10:18:46 UTC 2024
