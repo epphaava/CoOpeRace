@@ -1,1 +1,8 @@
 # CoOpeRace
+
+
+Kuidas käivitada?
+
+
+
+Demoserver

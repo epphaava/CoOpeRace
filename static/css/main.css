@@ -46,17 +46,16 @@ button:hover {
   background-color: #DDA15E;
 }
 
-/* Tables */
 table {
   align-self: center;
   width: 100%;
-  border-collapse: collapse; /* Ensure cells share borders */
+  border-collapse: collapse; 
   margin-top: 10px;
 }
 
 th, td {
   padding: 10px;
-  border-bottom: 1px solid #FEFAE0; /* Set bottom border only */
+  border-bottom: 1px solid #FEFAE0;
   text-align: left;
 }
 
@@ -107,15 +106,4 @@ form {
 
 #race_rows_table {
   width: 75%;
-}
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }

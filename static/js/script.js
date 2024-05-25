@@ -1,3 +1,5 @@
+
+// see file contents when it is chosen in the table
 $(document).ready(function() {
   $('.file-row').click(function() {
       var filename = $(this).text().trim();
@@ -5,6 +7,7 @@ $(document).ready(function() {
   });
 });
 
+// get contents of the chosen file
 function fetchFileContents(filename) {
   fetch('/get_file_contents', {
       method: 'POST',
@@ -17,7 +20,6 @@ function fetchFileContents(filename) {
   })
   .then(response => response.text())
   .then(data => {
-      // Update the content of the corresponding row with the file contents
       $('#file-contents-container').html(`<hr><h2>Contents of File: ${filename}</h2><pre>${data}</pre>`);
   });
 }
@@ -28,7 +30,6 @@ $(document).ready(function() {
     $('#hidden-table' + rowId).toggle();
   });
 
-  // Add click event listener to each row in the hidden table
   $('.warning-line-row').click(function() {
     var rowId = $(this).attr('data-key');
     var rowAnalyzer = $(this).attr('data-analyzer');

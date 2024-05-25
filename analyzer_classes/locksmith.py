@@ -17,7 +17,6 @@ class Locksmith(Analyzer):
 
   def run_analyzer(self, input_file_name):
 
-    # where the files are saved, to reuse if needed?
     input_file_path = os.path.join(self.uploaded_files_folder, input_file_name)
     
     # generate the dir path within the 'results' directory for the input file name

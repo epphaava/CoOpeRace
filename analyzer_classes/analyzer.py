@@ -16,7 +16,6 @@ class Analyzer(object):
     self.results_folder = results_folder
 
 
-  # aasumes the global variable is in the first row
   def find_race_lines(self, test):
 
     group_list = []

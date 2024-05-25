@@ -18,7 +18,7 @@ class Goblint(Analyzer):
 
   def run_analyzer(self, input_file_name):
 
-    # path to the 
+    # path to the  input file
     input_file_path = os.path.join('./', self.uploaded_files_folder, input_file_name)
 
     # generate the dir path within the 'results' directory for the input file name

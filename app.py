@@ -9,7 +9,6 @@ import analyzer_classes
 import analysis_results
 
 
-# analyzers.Goblint(), analyzers.Locksmith(), 
 analyzers_list = [analyzer_classes.Goblint(), analyzer_classes.Locksmith(), analyzer_classes.Relay()]
 
 app = Flask(__name__, static_url_path='/static')
@@ -106,8 +105,8 @@ def handle_existing_file():
             elif action == 'discard':
                 return redirect(url_for('results', filename=filename))
         return render_template('handle_existing_file.html', filename=filename)
+    
     else:
-        # kui jama siis algusesse tagasi
         return redirect(url_for('upload'))
 
 @app.route('/results/<filename>')
@@ -152,7 +151,6 @@ def my_utils():
             if line.analyzer == analyzer and line.group.info not in result:
                 result.append(line.group.info)
 
-
         return result
 
     def get_analyzers(line_list):
@@ -170,5 +168,8 @@ def my_utils():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--version', action='version', version='CoOpeRace version: 1.0')
+    parser.add_argument('--host', type=str, help='Host address for the server')
+    parser.add_argument('--port', type=int, help='Port number for the server')
     args = parser.parse_args()
-    app.run(debug=True, host='192.168.42.141', port=5000)
+
+    app.run()
