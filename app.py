@@ -172,4 +172,4 @@ if __name__ == '__main__':
     parser.add_argument('--port', type=int, help='Port number for the server')
     args = parser.parse_args()
 
-    app.run()
+    app.run(host=args.host, port=args.port)
